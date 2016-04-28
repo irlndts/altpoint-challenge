@@ -6,6 +6,5 @@ import (
 )
 
 func main() {
-	algorithm.PrintA()
-	fmt.Println("Hello, world")
+	fmt.Println(algorithm.Rpn("1 3 3 5 6"))
 }
