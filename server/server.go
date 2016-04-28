@@ -7,20 +7,11 @@ import (
 	"github.com/irlndts/altpoint-challenge/thrift/calculator"
 )
 
+// runServer runs thrift loop server for calculator requests
 func runServer(transportFactory thrift.TTransportFactory, protocolFactory thrift.TProtocolFactory, addr string, secure bool) error {
 	var transport thrift.TServerTransport
 	var err error
-	if secure {
-		cfg := new(tls.Config)
-		if cert, err := tls.LoadX509KeyPair("server.crt", "server.key"); err == nil {
-			cfg.Certificates = append(cfg.Certificates, cert)
-		} else {
-			return err
-		}
-		transport, err = thrift.NewTSSLServerSocket(addr, cfg)
-	} else {
-		transport, err = thrift.NewTServerSocket(addr)
-	}
+	transport, err = thrift.NewTServerSocket(addr)
 
 	if err != nil {
 		return err
