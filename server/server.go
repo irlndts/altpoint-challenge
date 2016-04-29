@@ -1,14 +1,13 @@
 package main
 
 import (
-	"crypto/tls"
 	"fmt"
 	"git.apache.org/thrift.git/lib/go/thrift"
 	"github.com/irlndts/altpoint-challenge/thrift/calculator"
 )
 
 // runServer runs thrift loop server for calculator requests
-func runServer(transportFactory thrift.TTransportFactory, protocolFactory thrift.TProtocolFactory, addr string, secure bool) error {
+func runServer(transportFactory thrift.TTransportFactory, protocolFactory thrift.TProtocolFactory, addr string) error {
 	var transport thrift.TServerTransport
 	var err error
 	transport, err = thrift.NewTServerSocket(addr)
