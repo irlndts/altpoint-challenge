@@ -19,16 +19,16 @@ The Solution includes two independent apps: server and client. Both work over th
 
 Basic steps how the logic works:
 * Client get a raw string with some math expression and sends it to the server
-* Server parse it via [Shunting-Yard Algorithm](https://en.wikipedia.org/wiki/Shunting-yard_algorithm) and than calculate it via [Polish Reverse Notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation)
+* Server parse it via Shunting-Yard Algorithm(https://en.wikipedia.org/wiki/Shunting-yard_algorithm) and than calculate it via Polish Reverse Notation (https://en.wikipedia.org/wiki/Reverse_Polish_notation)
 * Server sends back the result or an error
 
-RPN algorithms were moved to [independent lib](github.com/irlndts/altpoint-challenge). And it has TDD tests to show I could do it.
+RPN algorithms were moved to independent lib (github.com/irlndts/altpoint-challenge). And it has TDD tests to show I could do it.
 
 # Requirements
 * At least Go 1.6. Lower versions may also work but it's not guaranteed.
 * The GOPATH may need to be adjusted
 * The list of System Requirements please find here https://golang.org/doc/install
-* [Godep](https://github.com/tools/godep) utility (optional)
+* Godep (https://github.com/tools/godep) utility (optional)
 
 # Server 
 ## Installation
