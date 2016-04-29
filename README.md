@@ -94,17 +94,36 @@ By default
 ```
 it will start as non-framed, non-buffered client app which looks to localhost:9090 server-address
 
-When it works you could see the command line:
-```
->
-```
-
+When it works you could see the command line.
 you could use **ping** command to check if server is available
 ```
 >ping
 pong()
 >
 ```
+Use **quit** to leave the application
+```
+>quit
+chao
+#
+```
 
+use math expression with **spaces between elements** to calculate it
+```
+> 1 + 5 - 1 * ( 2 + -11 )
+Result: 15
+>
+```
 
+# What I'd love to do next
+* write more user-friendly math-expression interface, like 1+2 - 3* 4. I mean not to depend on spaces.
+* Cache requests [on both sides?]
+* Wrap each request to go-routine on server-side
+* The RPN lib is the only one where Unit-tasts are available for now. Client and Server are also need it.
 
+# Impressions
+* Thrift is new for me. I've worked with it only as a part of Scribe, but there were prepared libs.
+* Godep is new for me. Very interesting, will use it in future. 
+* Write (RPN-)algorithms is always interesting.
+
+Cheers.
