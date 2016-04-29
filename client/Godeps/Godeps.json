@@ -1,0 +1,15 @@
+{
+	"ImportPath": "github.com/irlndts/altpoint-challenge/client",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v62",
+	"Deps": [
+		{
+			"ImportPath": "git.apache.org/thrift.git/lib/go/thrift",
+			"Rev": "e363a34e63e851f17061a912a77e75a8ed8474bc"
+		},
+		{
+			"ImportPath": "github.com/irlndts/altpoint-challenge/thrift/calculator",
+			"Rev": "0a0e7dce8254edb82c71042894331c2f0401aa22"
+		}
+	]
+}
